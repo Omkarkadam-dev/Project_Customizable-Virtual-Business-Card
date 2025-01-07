@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Virtual Business Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Customizable Virtual Business Card</h1>
+        <p>Create, customize, and share your digital identity!</p>
+    </header>
+
+    <main>
+        <div class="card-container">
+            <div id="business-card" class="business-card theme-light">
+                <h2 id="name">John Doe</h2>
+                <p id="job-title"><i class="fas fa-briefcase"></i> Web Developer</p>
+                <p id="contact"><i class="fas fa-envelope"></i> johndoe@example.com</p>
+                <div id="qr-code" class="qr-container"></div>
+            </div>
+            <button id="download-btn">Download Card</button>
+        </div>
+
+        <div class="customizer">
+            <h3>Customize Your Card</h3>
+            <label for="name-input">Name:</label>
+            <input type="text" id="name-input" placeholder="Enter your name">
+
+            <label for="job-input">Job Title:</label>
+            <input type="text" id="job-input" placeholder="Enter your job title">
+
+            <label for="contact-input">Contact:</label>
+            <input type="text" id="contact-input" placeholder="Enter your email/phone">
+
+            <label for="theme-select">Theme:</label>
+            <select id="theme-select">
+                <option value="theme-light">Light</option>
+                <option value="theme-dark">Dark</option>
+                <option value="theme-gradient">Gradient</option>
+            </select>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Virtual Business Card | Designed with 💖</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
