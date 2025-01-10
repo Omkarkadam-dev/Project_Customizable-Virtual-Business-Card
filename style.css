@@ -1,204 +1,181 @@
-/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #1e1e2f, #3a3a5e);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ffd5;
+  text-shadow: 0px 4px 10px rgba(0, 255, 213, 0.6);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #b3b3cc;
+  margin-top: 10px;
+}
+
+/* Card Container */
+.card-container {
+  display: flexbox;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Business Card */
+.business-card {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #2c2c4d;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, background 0.3s ease, box-shadow 0.4s ease;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.business-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.business-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #00ffd5;
+  font-weight: bold;
+}
+
+.business-card p {
+  font-size: 1rem;
+  color: #d1d1d1;
+}
+
+/* Button Styling */
+button {
+  padding: 2px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #00ffd5, #0054ff);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 15px rgba(0, 255, 213, 0.4);
+}
+
+button:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to left, #00ffd5, #0054ff);
+  box-shadow: 0px 6px 20px rgba(0, 255, 213, 0.6);
+}
+
+/* Customizer */
+.customizer {
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.customizer h3 {
+  font-size: 1.8rem;
+  color: #00ffd5;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.customizer label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.customizer input,
+.customizer select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.customizer input:focus,
+.customizer select:focus {
+  border-color: #00ffd5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom right, #1e1e2f, #3a3a5e);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    overflow-x: hidden;
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  header {
-    margin-bottom: 40px;
-  }
-  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #00ffd5;
-    text-shadow: 0px 4px 10px rgba(0, 255, 213, 0.6);
+    font-size: 2.5rem;
   }
-  
+
   header p {
-    font-size: 1.2rem;
-    color: #b3b3cc;
-    margin-top: 10px;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .business-card {
-    width: 90%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, background 0.3s ease, box-shadow 0.4s ease;
-    text-align: center;
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .business-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.7);
-  }
-  
-  .business-card h2 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-    color: #00ffd5;
-    font-weight: bold;
-  }
-  
-  .business-card p {
     font-size: 1rem;
-    color: #d1d1d1;
   }
-  
-  #qr-code {
-    margin-top: 20px;
-  }
-  
+
   button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(to right, #00ffd5, #0054ff);
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 15px rgba(0, 255, 213, 0.4);
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
-  
-  button:hover {
-    transform: translateY(-5px);
-    background: linear-gradient(to left, #00ffd5, #0054ff);
-    box-shadow: 0px 6px 20px rgba(0, 255, 213, 0.6);
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
   }
-  
-  .customizer {
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 400px;
-    text-align: left;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out;
-    /
+
+  header p {
+    font-size: 0.9rem;
   }
-  
-  .customizer h3 {
-    font-size: 1.8rem;
-    color: #00ffd5;
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .customizer label {
-    display: block;
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #ffffff;
-  }
-  
-  .customizer input,
-  .customizer select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-    color: #000000;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .customizer input:focus,
-  .customizer select:focus {
-    border-color: #00ffd5;
-  }
-  
-  /* Themes */
-  .theme-light {
-    background: #ffffff;
-    color: #080707;
-    border: 1px solid #e0e0e0;
-  }
-  
-  .theme-dark {
-    background: #2c2c4d;
-    color: #ecf0f1;
-  }
-  
-  .theme-gradient {
-    background: linear-gradient(to bottom, #ff7eb3, #8e54e9);
-    color: #040101;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2.5rem;
-    }
-  
-    header p {
-      font-size: 1rem;
-    }
-  
-    .business-card {
-      width: 100%;
-    }
-  
-    .customizer {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 2rem;
-    }
-  
-    header p {
-      font-size: 0.9rem;
-    }
-  
-    button {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
-  }
-  
+}
